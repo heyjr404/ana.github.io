@@ -1,0 +1,1665 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Para o meu amor ❤️</title>
+
+  <meta
+    name="description"
+    content="Uma declaração feita especialmente para você."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --bg: #090b0f;
+      --panel: #11151b;
+      --panel2: #171c23;
+      --soft: #222933;
+      --text: #f7f7f7;
+      --muted: #aeb5bf;
+      --green: #8ff0bb;
+      --green2: #4fd88f;
+      --pink: #ff7fa8;
+      --purple: #a78bfa;
+      --shadow: 0 25px 70px rgba(0, 0, 0, .48);
+      --radius: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+
+      background:
+        radial-gradient(
+          circle at 12% 8%,
+          rgba(143, 240, 187, .10),
+          transparent 25%
+        ),
+        radial-gradient(
+          circle at 90% 15%,
+          rgba(255, 127, 168, .10),
+          transparent 25%
+        ),
+        linear-gradient(
+          145deg,
+          #07090c,
+          #0d1015 55%,
+          #090b0f
+        );
+
+      font-family: "DM Sans", sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* =========================
+       FUNDO ANIMADO
+    ========================= */
+
+    .ambient {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: .18;
+      animation: float 10s ease-in-out infinite alternate;
+    }
+
+    .orb.one {
+      width: 280px;
+      height: 280px;
+      background: var(--green);
+      left: -100px;
+      top: 25%;
+    }
+
+    .orb.two {
+      width: 330px;
+      height: 330px;
+      background: var(--pink);
+      right: -130px;
+      top: 45%;
+      animation-delay: -4s;
+    }
+
+    @keyframes float {
+      to {
+        transform: translateY(-35px) translateX(25px);
+      }
+    }
+
+    /* =========================
+       ESTRUTURA
+    ========================= */
+
+    .shell {
+      width: min(1180px, 92%);
+      margin: auto;
+      padding: 28px 0 70px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 28px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-weight: 700;
+      letter-spacing: -.3px;
+    }
+
+    .brand-dot {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+
+      display: grid;
+      place-items: center;
+
+      background: linear-gradient(
+        135deg,
+        var(--green),
+        #d7ffe9
+      );
+
+      color: #09100d;
+
+      box-shadow:
+        0 7px 25px rgba(143, 240, 187, .25);
+    }
+
+    .top-note {
+      color: var(--muted);
+      font-size: 13px;
+
+      padding: 9px 13px;
+
+      border: 1px solid rgba(255, 255, 255, .07);
+      border-radius: 999px;
+
+      background: rgba(255, 255, 255, .03);
+    }
+
+    /* =========================
+       CARDS
+    ========================= */
+
+    .card {
+      background:
+        linear-gradient(
+          145deg,
+          rgba(25, 30, 38, .94),
+          rgba(14, 18, 23, .96)
+        );
+
+      border: 1px solid rgba(255, 255, 255, .065);
+      border-radius: var(--radius);
+
+      box-shadow: var(--shadow);
+
+      overflow: hidden;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 26px;
+      align-items: stretch;
+    }
+
+    .hero-copy {
+      padding: 48px;
+    }
+
+    .eyebrow {
+      color: var(--green);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(42px, 6vw, 76px);
+      line-height: .98;
+
+      letter-spacing: -2.5px;
+
+      margin: 0 0 22px;
+    }
+
+    h1 span {
+      background:
+        linear-gradient(
+          100deg,
+          #fff,
+          var(--pink),
+          #ffd1df
+        );
+
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      color: transparent;
+    }
+
+    .lead {
+      font-size: 17px;
+      line-height: 1.75;
+      color: #c9ced6;
+      max-width: 610px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .btn {
+      border: 0;
+      border-radius: 999px;
+
+      padding: 13px 20px;
+
+      cursor: pointer;
+
+      transition:
+        .25s transform,
+        .25s box-shadow,
+        .25s background;
+
+      font-weight: 700;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--green);
+      color: #08110c;
+
+      box-shadow:
+        0 10px 30px rgba(143, 240, 187, .18);
+    }
+
+    .btn-dark {
+      background: #242a32;
+      color: #fff;
+
+      border: 1px solid rgba(255, 255, 255, .06);
+    }
+
+    /* =========================
+       CAPA
+    ========================= */
+
+    .cover {
+      min-height: 450px;
+
+      position: relative;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255, 127, 168, .15),
+          rgba(143, 240, 187, .07)
+        ),
+        #11151b;
+    }
+
+    .cover-art {
+      width: min(320px, 72%);
+      aspect-ratio: 1;
+
+      border-radius: 28px;
+
+      position: relative;
+
+      display: grid;
+      place-items: center;
+
+      background:
+        radial-gradient(
+          circle at 30% 25%,
+          #ffd6e3 0 3%,
+          transparent 4%
+        ),
+        radial-gradient(
+          circle at 70% 75%,
+          #ff9fbd 0 2%,
+          transparent 3%
+        ),
+        linear-gradient(
+          145deg,
+          #ff86aa,
+          #a75a84 50%,
+          #333a67
+        );
+
+      box-shadow:
+        0 35px 70px rgba(0, 0, 0, .45),
+        inset 0 0 70px rgba(255, 255, 255, .08);
+
+      transform: rotate(-2deg);
+    }
+
+    .cover-art::before,
+    .cover-art::after {
+      content: "";
+
+      position: absolute;
+
+      border-radius: 50%;
+
+      border: 1px solid rgba(255, 255, 255, .2);
+    }
+
+    .cover-art::before {
+      inset: 18%;
+      animation: pulse 3s infinite;
+    }
+
+    .cover-art::after {
+      inset: 28%;
+      animation: pulse 3s .7s infinite;
+    }
+
+    .heart-big {
+      font-size: 92px;
+
+      filter:
+        drop-shadow(
+          0 12px 20px rgba(0, 0, 0, .3)
+        );
+
+      animation: heart 1.8s ease-in-out infinite;
+    }
+
+    @keyframes heart {
+      50% {
+        transform: scale(1.08);
+      }
+    }
+
+    @keyframes pulse {
+      50% {
+        transform: scale(1.08);
+        opacity: .45;
+      }
+    }
+
+    /* =========================
+       PLAYER
+    ========================= */
+
+    .player {
+      margin-top: 26px;
+
+      padding: 22px 24px;
+
+      display: grid;
+
+      grid-template-columns:
+        auto 1fr auto;
+
+      gap: 18px;
+
+      align-items: center;
+    }
+
+    .play {
+      width: 50px;
+      height: 50px;
+
+      border: 0;
+      border-radius: 50%;
+
+      cursor: pointer;
+
+      background: var(--green);
+      color: #08110c;
+
+      font-size: 19px;
+
+      display: grid;
+      place-items: center;
+
+      box-shadow:
+        0 9px 25px rgba(143, 240, 187, .18);
+
+      transition: .2s ease;
+    }
+
+    .play:hover {
+      transform: scale(1.06);
+    }
+
+    .play:active {
+      transform: scale(.96);
+    }
+
+    .track-title {
+      font-weight: 700;
+    }
+
+    .track-sub {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 4px;
+    }
+
+    .progress {
+      height: 5px;
+
+      background: #2a3038;
+
+      border-radius: 20px;
+
+      margin-top: 12px;
+
+      overflow: hidden;
+
+      cursor: pointer;
+    }
+
+    .progress span {
+      display: block;
+
+      width: 0%;
+
+      height: 100%;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--green),
+          var(--pink)
+        );
+
+      border-radius: inherit;
+
+      transition: width .1s linear;
+    }
+
+    .time {
+      color: var(--muted);
+      font-size: 12px;
+      min-width: 42px;
+      text-align: right;
+    }
+
+    /* =========================
+       SEÇÕES
+    ========================= */
+
+    .section {
+      margin-top: 28px;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+
+      margin-bottom: 14px;
+    }
+
+    .section h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 30px;
+      margin: 0;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* =========================
+       CARDS DE AMOR
+    ========================= */
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .love-card {
+      padding: 25px;
+      min-height: 180px;
+      position: relative;
+    }
+
+    .icon {
+      width: 42px;
+      height: 42px;
+
+      border-radius: 13px;
+
+      display: grid;
+      place-items: center;
+
+      background: rgba(143, 240, 187, .09);
+
+      font-size: 20px;
+
+      margin-bottom: 20px;
+    }
+
+    .love-card h3 {
+      margin: 0 0 9px;
+      font-size: 18px;
+    }
+
+    .love-card p {
+      margin: 0;
+
+      color: var(--muted);
+
+      line-height: 1.65;
+
+      font-size: 14px;
+    }
+
+    .love-card .number {
+      position: absolute;
+
+      right: 20px;
+      top: 18px;
+
+      color: rgba(255, 255, 255, .12);
+
+      font-size: 34px;
+      font-weight: 700;
+    }
+
+    /* =========================
+       CARTA
+    ========================= */
+
+    .letter {
+      padding: 42px;
+      position: relative;
+    }
+
+    .letter::before {
+      content: "“";
+
+      position: absolute;
+
+      right: 28px;
+      top: -5px;
+
+      font-family: Georgia, serif;
+
+      font-size: 120px;
+
+      color: rgba(255, 127, 168, .08);
+    }
+
+    .letter p {
+      font-family: "Playfair Display", serif;
+
+      font-size: 21px;
+
+      line-height: 1.8;
+
+      color: #e7e9ed;
+
+      max-width: 850px;
+
+      margin: 0;
+    }
+
+    .signature {
+      margin-top: 24px;
+
+      color: var(--green);
+
+      font-weight: 700;
+    }
+
+    /* =========================
+       FOTOS
+    ========================= */
+
+    .photos {
+      display: grid;
+
+      grid-template-columns:
+        1.4fr .8fr .8fr;
+
+      gap: 14px;
+    }
+
+    .photo {
+      min-height: 230px;
+
+      border-radius: 20px;
+
+      overflow: hidden;
+
+      position: relative;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255, 127, 168, .3),
+          rgba(143, 240, 187, .12)
+        ),
+        #202630;
+
+      border: 1px solid rgba(255, 255, 255, .06);
+
+      box-shadow:
+        0 15px 40px rgba(0, 0, 0, .25);
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      display: block;
+    }
+
+    .photo:first-child {
+      min-height: 320px;
+    }
+
+    .photo-label {
+      position: absolute;
+
+      left: 14px;
+      bottom: 14px;
+
+      padding: 8px 11px;
+
+      background: rgba(0, 0, 0, .45);
+
+      backdrop-filter: blur(10px);
+
+      border: 1px solid rgba(255, 255, 255, .1);
+
+      border-radius: 12px;
+
+      font-size: 12px;
+    }
+
+    /* =========================
+       FINAL
+    ========================= */
+
+    .final {
+      margin-top: 28px;
+
+      padding: 45px;
+
+      text-align: center;
+
+      background:
+        radial-gradient(
+          circle at 50% 0,
+          rgba(255, 127, 168, .15),
+          transparent 45%
+        ),
+        linear-gradient(
+          145deg,
+          #171b23,
+          #0f1319
+        );
+    }
+
+    .final h2 {
+      font-family: "Playfair Display", serif;
+
+      font-size: 38px;
+
+      margin: 0 0 12px;
+    }
+
+    .final p {
+      color: var(--muted);
+
+      margin: 0 auto 24px;
+
+      max-width: 620px;
+
+      line-height: 1.7;
+    }
+
+    .footer {
+      text-align: center;
+
+      color: #686f79;
+
+      font-size: 12px;
+
+      margin-top: 25px;
+    }
+
+    /* =========================
+       MODAL
+    ========================= */
+
+    .modal {
+      position: fixed;
+
+      inset: 0;
+
+      background: rgba(2, 4, 7, .72);
+
+      backdrop-filter: blur(12px);
+
+      display: none;
+
+      align-items: center;
+      justify-content: center;
+
+      padding: 20px;
+
+      z-index: 20;
+    }
+
+    .modal.show {
+      display: flex;
+    }
+
+    .modal-box {
+      width: min(560px, 100%);
+
+      padding: 34px;
+
+      border-radius: 26px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #1c222b,
+          #10141a
+        );
+
+      border: 1px solid rgba(255, 255, 255, .09);
+
+      box-shadow:
+        0 40px 100px rgba(0, 0, 0, .6);
+
+      animation: pop .3s ease;
+
+      position: relative;
+    }
+
+    @keyframes pop {
+      from {
+        opacity: 0;
+        transform:
+          translateY(15px)
+          scale(.97);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    .close {
+      position: absolute;
+
+      right: 18px;
+      top: 16px;
+
+      width: 34px;
+      height: 34px;
+
+      border: 0;
+
+      border-radius: 50%;
+
+      background: #252b34;
+
+      color: #fff;
+
+      cursor: pointer;
+    }
+
+    .modal-box h3 {
+      font-family: "Playfair Display", serif;
+
+      font-size: 30px;
+
+      margin: 0 0 12px;
+    }
+
+    .modal-box p {
+      color: #c4c9d1;
+
+      line-height: 1.75;
+
+      margin: 0;
+    }
+
+    .secret {
+      margin-top: 20px;
+
+      padding: 15px;
+
+      border-radius: 16px;
+
+      background:
+        rgba(143, 240, 187, .06);
+
+      border:
+        1px solid rgba(143, 240, 187, .12);
+
+      color: #d8f9e6;
+    }
+
+    /* =========================
+       CORAÇÕES
+    ========================= */
+
+    .floating-heart {
+      position: fixed;
+
+      pointer-events: none;
+
+      z-index: 30;
+
+      font-size: 18px;
+
+      animation:
+        rise 2.5s ease-out forwards;
+    }
+
+    @keyframes rise {
+      0% {
+        opacity: 0;
+
+        transform:
+          translateY(0)
+          scale(.7)
+          rotate(0);
+      }
+
+      15% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+
+        transform:
+          translateY(-180px)
+          translateX(var(--x))
+          scale(1.35)
+          rotate(20deg);
+      }
+    }
+
+    /* =========================
+       RESPONSIVO
+    ========================= */
+
+    @media (max-width: 850px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .cover {
+        min-height: 340px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .photos {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .photo:first-child {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .shell {
+        width: 94%;
+        padding-top: 18px;
+      }
+
+      .hero-copy {
+        padding: 31px 24px;
+      }
+
+      h1 {
+        font-size: 48px;
+      }
+
+      .lead {
+        font-size: 15px;
+      }
+
+      .top-note {
+        display: none;
+      }
+
+      .player {
+        grid-template-columns: auto 1fr;
+      }
+
+      .time {
+        display: none;
+      }
+
+      .letter,
+      .final {
+        padding: 30px 23px;
+      }
+
+      .letter p {
+        font-size: 18px;
+      }
+
+      .photos {
+        grid-template-columns: 1fr;
+      }
+
+      .photo:first-child {
+        grid-column: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- FUNDO -->
+  <div class="ambient">
+    <div class="orb one"></div>
+    <div class="orb two"></div>
+  </div>
+
+  <main class="shell">
+
+    <!-- TOPO -->
+    <header class="topbar">
+
+      <div class="brand">
+        <div class="brand-dot">♥</div>
+        uma página só nossa
+      </div>
+
+      <div class="top-note">
+        feito com amor ♥
+      </div>
+
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero">
+
+      <div class="card hero-copy">
+
+        <div class="eyebrow">
+          para a pessoa que me mostrou oque é o amor
+        </div>
+
+        <h1>
+          Você é minha
+          <span>esperança.</span>
+        </h1>
+
+        <p class="lead">
+          A minha poesia preferida é você.</br>
+          E enquanto eu existir, vou escrever seu nome em tudo me faz feliz,</br>
+          em tudo que for leve
+          e em tudo que for amor.
+        </p>
+
+        <div class="actions">
+
+          <button
+            class="btn btn-primary"
+            onclick="openModal()"
+          >
+            💌 Abrir minha declaração
+          </button>
+
+          <button
+            class="btn btn-dark"
+            onclick="makeHearts()"
+          >
+            ♥ Um pouco de amor
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="card cover">
+
+        <div class="cover-art">
+          <div class="heart-big">♥</div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PLAYER -->
+    <section class="card player">
+
+      <button
+        class="play"
+        id="playBtn"
+        onclick="toggleMusic()"
+        aria-label="Tocar música"
+      >
+        ▶
+      </button>
+
+      <div>
+
+        <div class="track-title">
+          Nossa música
+        </div>
+
+        <div class="track-sub">
+          uma trilha sonora para nós dois
+        </div>
+
+        <div
+          class="progress"
+          id="progressContainer"
+          title="Clique para avançar na música"
+        >
+          <span id="bar"></span>
+        </div>
+
+      </div>
+
+      <div
+        class="time"
+        id="time"
+      >
+        0:00
+      </div>
+
+      <!--
+        COLOQUE O ARQUIVO musica.mp3
+        NA MESMA PASTA DO index.html
+      -->
+      <audio
+        id="music"
+        src="musica.mp3"
+        preload="metadata"
+      ></audio>
+
+    </section>
+
+
+    <!-- VERDADES -->
+    <section class="section">
+
+      <div class="section-head">
+
+        <h2>
+          Algumas verdades sobre nós
+        </h2>
+
+        <p>
+          as minhas favoritas
+        </p>
+
+      </div>
+
+
+      <div class="grid">
+
+        <article class="card love-card">
+
+          <div class="number">
+            01
+          </div>
+
+          <div class="icon">
+            ✨
+          </div>
+
+          <h3>
+            Coisas que eu gosto
+          </h3>
+
+          <p>
+            Eu gosto da forma como você existe no meu mundo.
+            Sem precisar tentar ser nada além de você.
+          </p>
+
+        </article>
+
+
+        <article class="card love-card">
+
+          <div class="number">
+            02
+          </div>
+
+          <div class="icon">
+            🌙
+          </div>
+
+          <h3>
+            Você é meu caminho
+          </h3>
+
+          <p>
+            Se eu pudesse escolher qualquer caminho,meus passos ainda me levariam até você.
+          </p>
+
+        </article>
+
+
+        <article class="card love-card">
+
+          <div class="number">
+            03
+          </div>
+
+          <div class="icon">
+            💗
+          </div>
+
+          <h3>
+            Você
+          </h3>
+
+          <p>
+            Você é a pintura que eu amo olhar,a música que eu amo ouvir e o livro que eu amo ler.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- CARTA -->
+    <section class="section">
+
+      <div class="section-head">
+
+        <h2>
+          Palavras que definam sentimentos.
+        </h2>
+
+        <p>
+          sem filtros
+        </p>
+
+      </div>
+
+
+      <div class="card letter">
+
+        <p>
+          Tô aqui, enquanto tento pensar em palavras que definam sentimentos, não existe um dos meu afazeres favoritos acordar do seu lado todos os dias,
+          sentir o amor exalando da tua pele, os teus olhos enormes me olhando o dia todo.
+
+          Sua gargalhada que me fez ter esperança que nossos filhos puxem isso de você.
+          Pra que eu possa permanecer lembrando de você em cada cantinho do mundo.
+
+          Digo e repito, vou estar do teu lado em todos os momentos, das crises de riso até ás crises de choro, na paz e no caos.
+          Segurando a tua mão quando o primeiro fruto do nosso amor nascer.
+        </p>
+
+        <div class="signature">
+          Esperando ansiosamente pelo dia que irei te aguardar encima do altar.
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FOTOS -->
+    <section class="section">
+
+      <div class="section-head">
+
+        <h2>
+          Nossos momentos
+        </h2>
+
+      </div>
+
+
+      <div class="photos">
+
+        <div class="photo">
+
+          <img
+            src="foto3.jpeg"
+            alt="Nosso momento"
+            onerror="this.style.display='none'"
+          >
+
+          <div class="photo-label">
+            nosso momento favorito ✦
+          </div>
+
+        </div>
+
+
+        <div class="photo">
+
+          <img
+            src="foto2.jpeg"
+            alt="Nós dois"
+            onerror="this.style.display='none'"
+          >
+
+          <div class="photo-label">
+            nós dois ♥
+          </div>
+
+        </div>
+
+
+        <div class="photo">
+
+          <img
+            src="foto1.jpeg"
+            alt="Uma lembrança"
+            onerror="this.style.display='none'"
+          >
+
+          <div class="photo-label">
+            uma lembrança
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FINAL -->
+    <section class="card final">
+
+      <h2>
+        E eu ainda tenho uma coisa para te perguntar...
+      </h2>
+
+      <p>
+        Eu sempre fui apaixonada por histórias de amor, mas nunca imaginei que, um dia, o meu romance favorito seria o nosso.
+      </p>
+
+      <button
+        class="btn btn-primary"
+        onclick="openModal(true)"
+      >
+        💗 Tenho uma pergunta para você
+      </button>
+
+    </section>
+
+
+    <footer class="footer">
+      feito especialmente para ela • com amor ♥
+    </footer>
+
+  </main>
+
+
+  <!-- MODAL -->
+  <div
+    class="modal"
+    id="modal"
+    onclick="outsideClose(event)"
+  >
+
+    <div class="modal-box">
+
+      <button
+        class="close"
+        onclick="closeModal()"
+        aria-label="Fechar"
+      >
+        ×
+      </button>
+
+      <div class="eyebrow">
+        só você pode abrir
+      </div>
+
+      <h3 id="modalTitle">
+        Você despertou meu lado poeta
+      </h3>
+
+      <p id="modalText">
+        Te esperei, te reencontrei, e hoje vivo uma das melhores escolhas que pude fazer</br>
+        é uma honra estar ao seu lado e um privilégio ser sua mulher.
+      </p>
+
+      <div
+        class="secret"
+        id="secretText"
+      >
+        Você é, e sempre vai ser,
+        uma das minhas escolhas favoritas. ♥
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- JAVASCRIPT -->
+  <script>
+
+    /* =========================
+       PLAYER DE MÚSICA
+    ========================= */
+
+    const music = document.getElementById("music");
+    const playBtn = document.getElementById("playBtn");
+    const bar = document.getElementById("bar");
+    const time = document.getElementById("time");
+    const progressContainer =
+      document.getElementById("progressContainer");
+
+
+    function toggleMusic() {
+
+      if (music.paused) {
+
+        music.play()
+          .then(() => {
+
+            playBtn.textContent = "Ⅱ";
+
+          })
+          .catch((error) => {
+
+            console.error(
+              "Não foi possível reproduzir a música:",
+              error
+            );
+
+            alert(
+              "Não consegui tocar a música. Verifique se o arquivo 'musica.mp3' está na mesma pasta do site."
+            );
+
+          });
+
+      } else {
+
+        music.pause();
+
+        playBtn.textContent = "▶";
+
+      }
+
+    }
+
+
+    /* Atualiza a barra */
+
+    music.addEventListener("timeupdate", () => {
+
+      if (!music.duration) {
+        return;
+      }
+
+      const progress =
+        (music.currentTime / music.duration) * 100;
+
+      bar.style.width = progress + "%";
+
+
+      const minutes =
+        Math.floor(music.currentTime / 60);
+
+      const seconds =
+        Math.floor(music.currentTime % 60)
+          .toString()
+          .padStart(2, "0");
+
+
+      time.textContent =
+        `${minutes}:${seconds}`;
+
+    });
+
+
+    /* Quando carregar a música */
+
+    music.addEventListener("loadedmetadata", () => {
+
+      const minutes =
+        Math.floor(music.duration / 60);
+
+      const seconds =
+        Math.floor(music.duration % 60)
+          .toString()
+          .padStart(2, "0");
+
+      time.textContent =
+        `0:00`;
+
+    });
+
+
+    /* Quando terminar */
+
+    music.addEventListener("ended", () => {
+
+      playBtn.textContent = "▶";
+
+      bar.style.width = "0%";
+
+      time.textContent = "0:00";
+
+    });
+
+
+    /* Clique na barra para avançar */
+
+    progressContainer.addEventListener(
+      "click",
+      (event) => {
+
+        if (!music.duration) {
+          return;
+        }
+
+        const rect =
+          progressContainer.getBoundingClientRect();
+
+        const position =
+          (event.clientX - rect.left) /
+          rect.width;
+
+        music.currentTime =
+          position * music.duration;
+
+      }
+    );
+
+
+    /* =========================
+       MODAL
+    ========================= */
+
+    function openModal(final = false) {
+
+      document.getElementById("modalTitle").textContent =
+        final
+          ? "Uma pergunta importante..."
+          : "Você desperta meu lado poeta";
+
+
+      document.getElementById("modalText").textContent =
+        final
+
+          ? "Aceita segurar a minha mão para escrevermos a história de amor mais linda que já foi vista?"
+
+          : "Te esperei, te reencontrei, e hoje vivo uma das melhores escolhas que pude fazer, é uma honra estar ao seu lado e um privilégio ser sua mulher.";
+
+
+      document.getElementById("secretText").textContent =
+        final
+
+          ? "É um privilégio ter você."
+
+          : "O resumo de paz em minha vida é você.";
+
+
+      document
+        .getElementById("modal")
+        .classList
+        .add("show");
+
+
+      makeHearts(12);
+
+    }
+
+
+    function closeModal() {
+
+      document
+        .getElementById("modal")
+        .classList
+        .remove("show");
+
+    }
+
+
+    function outsideClose(event) {
+
+      if (event.target.id === "modal") {
+
+        closeModal();
+
+      }
+
+    }
+
+
+    /* ESC fecha o modal */
+
+    document.addEventListener(
+      "keydown",
+      (event) => {
+
+        if (event.key === "Escape") {
+
+          closeModal();
+
+        }
+
+      }
+    );
+
+
+    /* =========================
+       CORAÇÕES
+    ========================= */
+
+    function makeHearts(amount = 8) {
+
+      const symbols = [
+        "♥",
+        "♡",
+        "❤",
+        "✦",
+        "💗"
+      ];
+
+
+      for (
+        let i = 0;
+        i < amount;
+        i++
+      ) {
+
+        const heart =
+          document.createElement("div");
+
+
+        heart.className =
+          "floating-heart";
+
+
+        heart.textContent =
+          symbols[
+            Math.floor(
+              Math.random() *
+              symbols.length
+            )
+          ];
+
+
+        heart.style.left =
+          (15 + Math.random() * 70) +
+          "vw";
+
+
+        heart.style.top =
+          (65 + Math.random() * 25) +
+          "vh";
+
+
+        heart.style.setProperty(
+          "--x",
+          (Math.random() * 180 - 90) +
+          "px"
+        );
+
+
+        heart.style.animationDelay =
+          (Math.random() * .45) +
+          "s";
+
+
+        document.body.appendChild(heart);
+
+
+        setTimeout(
+          () => heart.remove(),
+          3000
+        );
+
+      }
+
+    }
+
+  </script>
+
+</body>
+</html>
+```
